@@ -8,9 +8,9 @@ if(isset($_GET['trang'])){
 if($page =="" || $page ==1){
   $begin =0;
 }else{
-  $begin = ($page*3)-3;
+  $begin = ($page*8)-8;
 }
-$sql_pro ="SELECT * FROM tbl_sanpham, tbl_danhmuc WHERE tbl_sanpham.id_danhmuc=tbl_danhmuc.id_danhmuc ORDER BY tbl_sanpham.id_sanpham DESC LIMIT $begin,3";
+$sql_pro ="SELECT * FROM tbl_sanpham, tbl_danhmuc WHERE tbl_sanpham.id_danhmuc=tbl_danhmuc.id_danhmuc ORDER BY tbl_sanpham.id_sanpham DESC LIMIT $begin,8";
 $query_pro = mysqli_query($mysqli,$sql_pro);
 ?>
 
@@ -18,8 +18,6 @@ $query_pro = mysqli_query($mysqli,$sql_pro);
            <ul class="product_list">
             <?php
             while($row = mysqli_fetch_array($query_pro)){
-
-           
             ?>
             <li>
                 <a href="index.php?quanly=sanpham&id=<?php echo $row['id_sanpham']?>">

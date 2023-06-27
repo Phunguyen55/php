@@ -39,7 +39,7 @@ $query_lietke_sp = mysqli_query($mysqli, $sql_lietke_sp);
 
     } ?></td>
     <td>
-        <a href="modules/quanlysp/xuly.php?idsanpham=<?php echo $row['id_sanpham']?>">Xóa</a> | <a href="?action=quanlysanpham&query=sua&idsanpham=<?php echo $row['id_sanpham'] ?>">Sửa</a>
+        <a onclick="return confirm('Bạn có muốn xóa không')" href="modules/quanlysp/xuly.php?idsanpham=<?php echo $row['id_sanpham']?>">Xóa</a> | <a href="?action=quanlysanpham&query=sua&idsanpham=<?php echo $row['id_sanpham'] ?>">Sửa</a>
     </td>
 </tr>
   <?php

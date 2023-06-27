@@ -32,6 +32,10 @@
         include("main/camon.php");
        }elseif($tam=='thaydoimatkhau'){
         include("main/thaydoimatkhau.php");
+       }elseif($tam=='danhmucbaiviet'){
+        include("main/danhmucbaiviet.php");
+       }elseif($tam=='baiviet'){
+        include("main/baiviet.php");
        }else{
            include("main/index.php");
                

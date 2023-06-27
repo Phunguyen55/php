@@ -15,10 +15,10 @@ while($row_chitiet = mysqli_fetch_array($query_chitiet)){
 <form action="pages/main/themgiohang.php?idsanpham=<?php echo $row_chitiet['id_sanpham']?>" method="POST" >
 <div class="chitiet_sanpham">
     <h3>Tên sản phẩm : <?php echo $row_chitiet['tensanpham']?></h3>
-    <p>Mã sp : <?php echo $row_chitiet['masp']?></p>
-    <p>Giá sp : <?php echo number_format($row_chitiet['giasp'],0,',','.').'vnd' ?></p>
-    <p>Số lượng sp : <?php echo $row_chitiet['soluong']?></p>
-    <p>Danh muc sp : <?php echo $row_chitiet['tendanhmuc']?></p>
+    <p>Mã sản phẩm : <?php echo $row_chitiet['masp']?></p>
+    <p>Giá sản phẩm : <?php echo number_format($row_chitiet['giasp'],0,',','.').'vnd' ?></p>
+    <p>Số lượng : <?php echo $row_chitiet['soluong']?></p>
+    <p>Danh muc : <?php echo $row_chitiet['tendanhmuc']?></p>
     <p><input type="submit" value="Thêm giỏ hàng" name="themgiohang" class="themgiohang"></p>
 </div>
 </form>
